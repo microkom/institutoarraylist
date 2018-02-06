@@ -58,26 +58,27 @@ public class Alumno extends Persona {
         String texto="";
         texto += "\n" + super.toString();
         if (super.getFechaNac().mayorDe(18)) {
-            texto += "\tEs mayor de edad" + "\n";
+            texto += "| Es mayor de edad   |\n";//\n\t+" + hy(61,"-")+"+\n";
         } else {
-            texto += "\tEs menor de edad" + "\n";
+            texto += "| Es menor de edad   |\n";//\n\t+" + hy(61,"-")+"+\n";
         }
         return texto;
     }
 
     public String toString() {
         //linea de la tabla
-        String guion = "\t+" + hy(61,"-") + "+";
+        String linea = "\t+" + hy(61,"-") + "+";
         
         //linea separadora de alumnos
-        String texto =  hy(3," ")+"+" +hy(76,"=")+"+";
+        //String texto =  hy(3," ")+"+" +hy(76,"=")+"+";
+        String texto =  "";//hy(3," ")+"+" +hy(76,"=")+"+";
         
         //Es mayor de eadad?
         texto+=menorDeEdad();
         
         //información de los módulos y el alumno
-        texto += "\n\tMatriculado en: \n";
-        texto += guion + "\n\t| Modulo                 | Ciclo   | Profesor      | Nota     |\n" + guion;
+        //texto += "\n\tMatriculado en: \n";
+        texto += linea + "\n\t| Modulo                 | Ciclo   | Profesor      | Nota     |\n" + linea;
             //nota y nota media
         float med = 0;
 
@@ -91,10 +92,13 @@ public class Alumno extends Persona {
         float notaMedia = (float) med / this.notas.size();
         
         //linea
-        texto += "\n\t+" + hy(61,"-");
+        String leftAlignFormat = "\t| %-20s     %-2.2f %-29s |";
+        
+        texto += "\n\t+" + hy(61,"-")+"+";
         //dar formato a un valor en medio de una concatenació
-        String textoAux= String.format("+\n\tNota media alumno: %2.2f \n\n", notaMedia);
-        texto+= textoAux;
+        String textoAux= String.format(leftAlignFormat,"Nota media alumno: ", notaMedia," ");
+        texto+="\n"+ textoAux+"\n";
+        texto+= "\t+" + hy(61,"-")+"+\n";
         return texto;
     }
 

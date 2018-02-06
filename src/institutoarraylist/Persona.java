@@ -5,6 +5,8 @@
  */
 package institutoarraylist;
 
+import static institutoarraylist.Alumno.hy;
+
 /**
  *
  * @author DAW
@@ -51,8 +53,9 @@ public class Persona {
   
     public String toString() {
         String texto = "";
-        texto = "\tDNI: " + this.dni ;
-        texto+="\t- \tNombre: "+this.nombre +"\t-";
+        texto += "\n\t+" + hy(61,"-")+"+\n";
+        texto += "\t|  DNI: " + this.dni ;
+        texto+="\t|  Nombre: "+this.nombre +"\t ";
         
         return texto;
     }
