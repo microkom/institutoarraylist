@@ -51,7 +51,6 @@ public class Ciclo {
     public Alumno personaNotaMaxima() {
 
         Alumno max = this.nombreAlumno.get(0);
-        Alumno min = this.nombreAlumno.get(0);
         for (Alumno obj : nombreAlumno) {
             if (obj.notaMedia() > max.notaMedia()) {
                 max = obj;

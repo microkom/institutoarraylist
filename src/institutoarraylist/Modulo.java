@@ -65,22 +65,5 @@ public class Modulo {
         
         texto+=String.format(leftAlignFormat,this.nombreModulo, this.nombreCiclo.getNombre() ,this.nombreProfesor.getNombre() );
         return texto;
-    }
-    
-    /*
-    public String toStringa() {
-        String texto = "";
-        //                          dni   nombre      18    ciclo    mod,   prof,   not 
-        String leftAlignFormat = "| %-8s |  %-18s |  %-4s |  %-8s | %-23s |  %-9s | %-4.2f |  %-10s |";
-        //datos de la tabla
-        texto += String.format(leftAlignFormat, super.getDni(), super.getNombre(), getMayorEdad(),  nombreCiclo(), nombreModulo(), nomProf(),notaMedia() , "tes");
-        //linea inferior
-        texto += "\n" + guiones();
-        return texto;
-    }
-    */
-    
-
-
-    
+    }   
 }

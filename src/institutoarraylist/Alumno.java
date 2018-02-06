@@ -58,9 +58,9 @@ public class Alumno extends Persona {
         String texto="";
         texto += "\n" + super.toString();
         if (super.getFechaNac().mayorDe(18)) {
-            texto += "| Es mayor de edad   |\n";//\n\t+" + hy(61,"-")+"+\n";
+            texto += "| Es mayor de edad   |\n";
         } else {
-            texto += "| Es menor de edad   |\n";//\n\t+" + hy(61,"-")+"+\n";
+            texto += "| Es menor de edad   |\n";
         }
         return texto;
     }
@@ -70,14 +70,13 @@ public class Alumno extends Persona {
         String linea = "\t+" + hy(61,"-") + "+";
         
         //linea separadora de alumnos
-        //String texto =  hy(3," ")+"+" +hy(76,"=")+"+";
-        String texto =  "";//hy(3," ")+"+" +hy(76,"=")+"+";
+        
+        String texto =  "";
         
         //Es mayor de eadad?
         texto+=menorDeEdad();
         
         //información de los módulos y el alumno
-        //texto += "\n\tMatriculado en: \n";
         texto += linea + "\n\t| Modulo                 | Ciclo   | Profesor      | Nota     |\n" + linea;
             //nota y nota media
         float med = 0;
